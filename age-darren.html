@@ -5,8 +5,8 @@
 <p>Please enter your name and age to calculate how many years until you turn 100 </p>
 
 <form id="frm1">
-  Name: <input type="text" name="name" value="Donald"><br>
-  Dob: <input type="date" name="dob" value="0"><br><br>
+  Name: <input type="text" name="name" value="Darren"><br>
+  Dob: <input type="date" name="dob" value="2007-12-13"><br><br>
 </form> 
 
 
@@ -21,16 +21,25 @@
 
         var name = form.name.value;
         var dob = form.dob.value;
-        var dob_obj = new Date(dob)
+        var dob_obj = new Date(dob);
 
-        var dob_year = dob_obj.getFullYear()
+        var dob_year = dob_obj.getUTCFullYear();
+        var dob_month = dob_obj.getUTCMonth();
+        var dob_day = dob_obj.getUTCDate();
 
-        var current_date = new Date()
-        var current_year = current_date.getFullYear()
-        var age = current_year - dob_year
+        var current_date = new Date();
+        var current_year = current_date.getUTCFullYear();
+        var current_month = current_date.getUTCMonth();
+        var current_day = current_date.getUTCDate();
+
+        var age = current_year - dob_year;
+
+        if (current_month < dob_month || (current_month === dob_month && current_day < dob_day)){
+            age--
+        }
 
         var remainingYears = 100 - age;
-        output = "Hello " + name + "<br>You will reach 100 years in: " + remainingYears;
+        output = "what's up " + name + "," + "<br>you're going to be 100 in: " + remainingYears + " years!";
         document.getElementById("output").innerHTML = output;
     }
 </script>
