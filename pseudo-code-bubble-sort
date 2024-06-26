@@ -1,14 +1,11 @@
 input_list = [-1, 8, -4, 0, 9, 10]
 
+did_i_change_stuff = true
 
 while (  did_i_change_stuff  ) {
 	var did_i_change_stuff = false
 
 	for index = 0, index < length(input_list), index += 1 {
-		did_i_change_stuff = true
-		
-		
-
 		if (input_list[index] > input_list[index + 1]) {
 			auxiliary = input_list[index]
 			input_list[index] = input_list[index + 1])
