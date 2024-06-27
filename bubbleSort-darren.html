@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var inputList = ["said","yoo","what","__+","Mastery","..","AWkWaRD","maybe","jelly"];
+var auxiliary;
+var didIChangeStuff = true;
+
+while (  didIChangeStuff  ) {
+	 didIChangeStuff = false
+
+	for (var index = 0; index < inputList.length; index++) {
+		if (inputList[index] > inputList[index + 1]) {
+			auxiliary = inputList[index]
+			inputList[index] = inputList[index + 1]
+			inputList[index + 1] = auxiliary
+
+			didIChangeStuff = true
+		}
+	}
+}
+console.log(inputList)
+</script>
+</body>
+</html>
