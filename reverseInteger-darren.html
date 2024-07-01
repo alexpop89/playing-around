@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var inputNumber = 8909876621;
+var outputNumber = 0;
+var digit;
+
+while  (inputNumber > 0){
+	digit = inputNumber % 10;
+	outputNumber = outputNumber * 10 + digit;
+	inputNumber = Math.floor(inputNumber / 10);
+}
+console.log(outputNumber);
+</script>
+</body>
+</html>
