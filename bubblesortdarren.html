@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//var inputList = 581425?
+function sortInteger (number){
+var digits = Array.from(String(number), Number);//converts input integer into a string, converts string into array of characters, then converts the strings back into numbers
+//bubble sort
+var auxiliary;
+var didIChangeStuff = true;
+
+while (  didIChangeStuff  ) {
+	 didIChangeStuff = false
+
+	for (var index = 0; index < digits.length-1; index++) {
+		if (digits[index] > digits[index + 1]) {
+			auxiliary = digits[index]
+			digits[index] = digits[index + 1]
+			digits[index + 1] = auxiliary
+
+			didIChangeStuff = true
+		}
+	}
+}
+//converts result back into number
+rearrangedNumber = Number(digits.join(''));
+return rearrangedNumber;
+}
+var inputList = 581425
+var output = sortInteger (inputList);
+console.log(output);
+</script>
+</body>
+</html>
