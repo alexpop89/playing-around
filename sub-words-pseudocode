@@ -1,0 +1,9 @@
+long_string = saldiabaasodiasudaalbgblapouishdmkd
+
+
+for index = 0; index < long_string.length - 3 ; index+=1 {
+	
+	for j = 3; j <= long_string_length - index; j += 1 {
+		substring = long_string[index, index + j]   // index + j is THE NUMBER of characters we get, not the end position
+	}
+}
