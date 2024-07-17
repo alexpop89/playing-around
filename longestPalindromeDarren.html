@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+longString = "amegemajajahekaslgheaeaeaeaeaedeljasglaiuwefhldahdfajklsmemememememe"
+var longestPalindrome = "";
+
+function isPalindrome(word){
+var reversedWord =""
+for (var i = word.length - 1; i >= 0; i--) {
+	reversedWord += word[i];
+}
+return word == reversedWord;
+}
+
+for (var index = 0; index <= longString.length - 3 ; index++) {
+	
+	for (var substringLength = 3; substringLength <= longString.length - index; substringLength++) {
+		var substring = longString.substr(index,substringLength);   // index + substringLength is THE NUMBER of characters we get, not the end position
+		if (isPalindrome(substring) && substring.length > longestPalindrome.length) {
+			longestPalindrome = substring;
+			
+		}
+	}
+}
+	
+console.log ("The longest palindrome in the string: " + longestPalindrome);
+
+</script>
+</body>
+</html>
