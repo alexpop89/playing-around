@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var n = 3;
+function isDivisibleBy11 (num){
+	if (num % 22 == 0){
+		return true;
+	}else {
+		return false;
+	}
+}
+
+function generateDivisibleNums (count){
+	var result = [];
+	var number = 1;
+	while (result.length < count){
+		if (isDivisibleBy11(number)){
+		result.push(number);
+		}
+		number++;
+	}
+	return result;
+}
+console.log(generateDivisibleNums(n))
+</script>
+</body>
+</html>
