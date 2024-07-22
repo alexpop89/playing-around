@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <body>
-<script>
-function isPrime(inputNumber) {
-    for (var i = 2; i < inputNumber; i++) {
-        if (inputNumber % i === 0) {
-            return false;
+    <script>
+        function prettyPrintDuration(startTimestamp, endTimestamp) {
+            const duration = endTimestamp - startTimestamp;
+            const totalSeconds = Math.floor(duration / 1000);
+            const milliseconds = duration % 1000;
+
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const remainingSeconds = totalSeconds % 60;
+
+            console.log(`${hours} hours, ${minutes} minutes, ${remainingSeconds} seconds, ${milliseconds} milliseconds`);
         }
-    }
 
-    return true;
-}
+        function isPrime(inputNumber) {
+            for (var i = 2; i < Math.floor(Math.sqrt(inputNumber)); i++) {
+                if (inputNumber % i === 0) {
+                    return false;
+                }
+            }
 
-numberOfPrimeNums = 4;
-count = 1;
-currentNum = 3;
+            return true;
+        }
 
-console.log(2);
+        numberOfPrimeNums = 20000;
 
-while (count < numberOfPrimeNums){
-    if (isPrime(currentNum)){
-        console.log(currentNum)
-        count += 1
-    }
-    currentNum++
-}
-</script>
+        start_time = new Date().getTime()
+
+        count = 1;
+        currentNum = 3;
+
+        console.log(2);
+
+        while (count < numberOfPrimeNums) {
+            if (isPrime(currentNum)) {
+                console.log(currentNum)
+                count += 1
+            }
+            currentNum++
+        }
+
+        end_time = new Date().getTime()
+
+        prettyPrintDuration(start_time, end_time)
+
+    </script>
 </body>
+
 </html>

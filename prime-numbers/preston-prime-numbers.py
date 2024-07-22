@@ -1,4 +1,6 @@
 from datetime import datetime
+from math import sqrt
+
 
 def pretty_print_duration(start_timestamp, end_timestamp):
     duration = end_timestamp - start_timestamp
@@ -12,7 +14,7 @@ def pretty_print_duration(start_timestamp, end_timestamp):
     print(f"{hours} hours, {minutes} minutes, {seconds} seconds, {milliseconds} milliseconds")
 
 def is_prime(input_number):
-    for i in range(2, input_number):
+    for i in range(2, round(sqrt(input_number))):
         if input_number % i == 0:
             return False
     return True
