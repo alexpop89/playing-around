@@ -3,8 +3,20 @@ def is_divisible_by_11(number):
         return True
     else:
         return False
-number = int(input("Enter a number: "))
-if is_divisible_by_11(number):
-    print(f"{number} is divisible by 11.")
-else:
-    print(f"{number} is not divisible by 11.")
+
+def main():
+    user_input = int(input("Enter the number of numbers divisible by 11 you want: "))
+    if user_input < 0:
+        print("Please enter a positive number.")
+    else:
+        count = 0
+        current_number = 1
+
+    while count < user_input:
+        if is_divisible_by_11(current_number):
+            print(current_number)
+            count += 1
+
+        current_number += 1
+
+main()
