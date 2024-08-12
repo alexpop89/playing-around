@@ -29,7 +29,7 @@ print(2)
 
 while count < number_of_prime_numbers:
     if is_prime(current_number):
-        print(current_number)
+        # print(current_number)
         count += 1
     current_number += 1
 
