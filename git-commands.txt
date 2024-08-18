@@ -1,0 +1,13 @@
+1. git clone - used for cloning a git project to your local machine
+ex: git clone <remote-git-url>
+2. git status - used for showing you the number of changes and where they are in relationship to you LOCAL git repository
+3. git branch - shows you available branch names
+4. git branch <branch_name> - creates a new branch on your LOCAL repository
+5. git checkout <branch_name> - switches your LOCAL git repository to the specified branch
+6. git fetch origin - fetches all changes from GIT CLOUD (REMOTE) to your LOCAL machine
+7. git add . - add ALL files in the local folder to be tracked by git
+7a. git add <file_name> - only add a specific file in the local folder to be tracked by git
+8. git commit -m 'your message here' - commits the added work (see point 7) to your LOCAL git repository
+9. git push origin <branch_name> - push already commited code to a specific REMOTE branch on "origin"
+10. git pull origin <branch names> - bring all REMOTE changes to your LOCAL git repository
+11. git fetch origin - bring all REMOTE branches as LOCAL branches in your LOCAL git repository
